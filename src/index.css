@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&family=Comfortaa:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif-title: "Fredoka", "Nunito", cursive, sans-serif;
+  --font-serif: "Fredoka", "Nunito", cursive, sans-serif;
+  --font-sans: "Nunito", "Fredoka", system-ui, -apple-system, sans-serif;
+  --font-mono: "Fredoka", "Nunito", monospace;
+
+  /* Palette based directly on the uploaded Tree of Knowledge image */
+  /* Vibrant Apple Lime Green (Tree foliage canopy) */
+  --color-tree-green: #78C043;
+  --color-tree-green-light: #bef264;
+  --color-tree-green-bright: #84cc16;
+  --color-tree-green-deep: #4d7c0f;
+
+  /* Rich Royal Mulberry Purple (Tree trunk, children learners & book base) */
+  --color-tree-purple: #9C27B0;
+  --color-tree-purple-deep: #701a75;
+  --color-tree-purple-rich: #86198f;
+  --color-tree-purple-plum: #581c87;
+  --color-tree-purple-dark: #1f072c;
+  --color-tree-purple-card: #2d0c3e;
+  --color-tree-purple-soft: #f3e8ff;
+}
+
+/* Kids-Friendly Universal Typography */
+html, body {
+  font-family: 'Nunito', 'Fredoka', system-ui, sans-serif;
+  letter-spacing: 0.015em;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-serif,
+.font-title,
+button,
+[role="button"] {
+  font-family: 'Fredoka', 'Nunito', cursive, sans-serif !important;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Friendly rounded buttons & cards */
+button {
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Hexagon clip path utilities */
+.clip-hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.clip-hexagon-horizontal {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+/* Canvas whiteboard */
+canvas {
+  touch-action: none;
+}
+
+/* ========================================================================= */
+/* PALETTE RE-MAP: Tree of Knowledge (Vibrant Purple & Apple Lime Green)     */
+/* ========================================================================= */
+
+/* App background */
+.bg-\[\#140e0a\],
+.bg-\[\#120c08\],
+.bg-\[\#120b07\],
+.bg-\[\#150f0b\] {
+  background-color: #1a0627 !important;
+}
+
+/* Primary card containers */
+.bg-\[\#241a12\],
+.bg-\[\#231a13\],
+.bg-\[\#2c221a\] {
+  background-color: #2b0c3e !important;
+  border-color: rgba(168, 85, 247, 0.3) !important;
+}
+
+.hover\:bg-\[\#2d2016\]:hover,
+.hover\:bg-\[\#2d2015\]:hover,
+.hover\:bg-\[\#2c1d13\]:hover {
+  background-color: #381252 !important;
+}
+
+/* Secondary deep containers */
+.bg-\[\#18110b\],
+.bg-\[\#19110b\],
+.bg-\[\#17100a\],
+.bg-\[\#1f1812\] {
+  background-color: #220832 !important;
+}
+
+/* Header & navigation background */
+.bg-\[\#1c140d\]\/95,
+.bg-\[\#1c140d\] {
+  background-color: rgba(29, 7, 44, 0.96) !important;
+}
+
+/* Control pills & inputs */
+.bg-\[\#251b12\],
+.bg-\[\#1b120c\] {
+  background-color: #35104d !important;
+}
+
+/* Amber text remapped to Apple Lime Green & Bright Lavender */
+.text-amber-400 {
+  color: #bef264 !important; /* Fresh bright apple lime */
+}
+
+.text-amber-300 {
+  color: #d9f99d !important; /* Soft lime highlight */
+}
+
+.text-amber-200 {
+  color: #f3e8ff !important; /* Soft lilac white */
+}
+
+.text-amber-200\/90,
+.text-amber-200\/80,
+.text-amber-200\/70 {
+  color: #e9d5ff !important;
+}
+
+.text-amber-100 {
+  color: #ffffff !important;
+}
+
+/* Hover text */
+.hover\:text-amber-300:hover,
+.group-hover\:text-amber-300:hover,
+.hover\:text-amber-400:hover {
+  color: #a3e635 !important;
+}
+
+/* Borders remapped to purple and lime */
+.border-amber-500\/30,
+.border-amber-500\/40,
+.border-amber-500\/20,
+.border-amber-500\/10 {
+  border-color: rgba(168, 85, 247, 0.35) !important;
+}
+
+.hover\:border-amber-400:hover {
+  border-color: #a3e635 !important;
+}
+
+/* Gradients: Amber to Lime & Purple */
+.from-amber-500.to-amber-600 {
+  --tw-gradient-from: #78C043 !important;
+  --tw-gradient-to: #65a30d !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.from-amber-400.to-amber-500 {
+  --tw-gradient-from: #84cc16 !important;
+  --tw-gradient-to: #78C043 !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.from-\[\#241a12\].via-\[\#2d2015\].to-\[\#1c130d\] {
+  --tw-gradient-from: #3b0f55 !important;
+  --tw-gradient-via: #2c0b41 !important;
+  --tw-gradient-to: #1a0526 !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to) !important;
+}
+
+/* Badges with lime background */
+.bg-amber-500\/20 {
+  background-color: rgba(132, 204, 22, 0.22) !important;
+  color: #bef264 !important;
+}
+
+.bg-amber-500\/10 {
+  background-color: rgba(168, 85, 247, 0.2) !important;
+}
+
+.bg-amber-500 {
+  background-color: #78C043 !important;
+}
+
+/* Shadow accents */
+.shadow-amber-500\/20 {
+  box-shadow: 0 10px 25px -5px rgba(120, 192, 67, 0.3) !important;
+}
+
+/* Custom Tree theme utilities */
+.tree-gradient-btn {
+  background: linear-gradient(135deg, #78C043 0%, #65a30d 100%);
+  color: #0f2305;
+  box-shadow: 0 4px 14px rgba(120, 192, 67, 0.35);
+}
+
+.tree-purple-btn {
+  background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.35);
+}
