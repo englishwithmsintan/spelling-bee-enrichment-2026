@@ -393,7 +393,7 @@ export default function HomophoneStageShowdown({
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="text-xs font-black uppercase tracking-wider text-amber-900 font-mono">
-                      Scripps Stage Homophone Trap Warning!
+                      English 1 Competition Homophone Trap Warning!
                     </span>
                     <span className="text-[10px] font-mono bg-amber-200 text-amber-950 px-2 py-0.5 rounded font-black">
                       IPA Sound: {currentPair.soundIpa}
@@ -430,13 +430,13 @@ export default function HomophoneStageShowdown({
                 </button>
               </div>
 
-              {/* STEP 2: THE 5 OFFICIAL SCRIPPS STAGE QUESTIONS */}
+              {/* STEP 2: THE 5 OFFICIAL ENGLISH 1 STAGE INQUIRIES */}
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-xs font-mono font-black uppercase text-[#9b2c98]">Step 2: Speller Interrogation</span>
+                    <span className="text-xs font-mono font-black uppercase text-[#9b2c98]">Step 2: Speller Inquiries</span>
                     <h4 className="text-base sm:text-lg font-black uppercase text-slate-900">
-                      Ask the 5 Legal Questions to Dr. Jacques Bailly 🎙️
+                      Ask Clarifying Questions to the Official Pronouncer 🎙️
                     </h4>
                   </div>
                   <span className="text-xs font-bold text-slate-500">
@@ -895,7 +895,7 @@ export default function HomophoneStageShowdown({
                       <div className="p-3 bg-amber-50 rounded-xl border-2 border-amber-300 text-xs font-bold text-amber-950 flex items-start gap-2">
                         <Lightbulb className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                         <div>
-                          <span className="font-mono text-[10px] uppercase text-amber-800 block">Scripps Memory Hook:</span>
+                          <span className="font-mono text-[10px] uppercase text-amber-800 block">English 1 Memory Hook:</span>
                           <span className="leading-snug">{w.memoryHook}</span>
                         </div>
                       </div>
@@ -916,7 +916,7 @@ export default function HomophoneStageShowdown({
       )}
 
       {/* ========================================================================= */}
-      {/* VIEW 3: SCRIPPS STAGE PROTOCOL & RULES GUIDE                              */}
+      {/* VIEW 3: ENGLISH 1 STAGE PROTOCOL & RULES GUIDE                            */}
       {/* ========================================================================= */}
       {activeView === 'stage-rules' && (
         <div className="space-y-6">

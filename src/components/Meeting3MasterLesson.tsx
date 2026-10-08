@@ -299,7 +299,7 @@ export default function Meeting3MasterLesson({
               Championship Comprehensive Master Class 🐝
             </span>
             <span className="text-xs font-black uppercase font-mono bg-white/20 text-white px-3 py-1 rounded-full border border-white/40">
-              90-Minute Scripps Two-Bee Syllabus
+              90-Minute English 1 Two-Bee Syllabus
             </span>
             <span className="text-xs font-black uppercase font-mono bg-amber-400 text-stone-950 px-3 py-1 rounded-full border border-amber-300">
               With Foundational Anchor Warm-Ups 🌉
@@ -311,7 +311,7 @@ export default function Meeting3MasterLesson({
           </h2>
 
           <p className="text-sm sm:text-base text-fuchsia-100 font-bold leading-relaxed">
-            Welcome to the deep-dive instructional module for the <strong>Championship Master Class</strong>. We begin with a high-energy retrieval warm-up bridging your <strong>foundational orthographic anchors</strong> (<em>dis-, tele-, -ous, silent letters, and double consonants</em>), and then unpack the complete Two-Bee curriculum: <strong>French loanwords with accents and silent endings</strong>, <strong>Greek roots (phil- & -phobia)</strong>, and <strong>125 Scripps championship words</strong>!
+            Welcome to the deep-dive instructional module for the <strong>Championship Master Class</strong>. We begin with a high-energy retrieval warm-up bridging your <strong>foundational orthographic anchors</strong> (<em>dis-, tele-, -ous, silent letters, and double consonants</em>), and then unpack the complete Two-Bee curriculum: <strong>French loanwords with accents and silent endings</strong>, <strong>Greek roots (phil- & -phobia)</strong>, and <strong>English 1 championship words</strong>!
           </p>
 
           <div className="flex flex-wrap gap-2 pt-2">
@@ -408,7 +408,7 @@ export default function Meeting3MasterLesson({
           <div className="bg-white rounded-3xl p-6 sm:p-8 border-4 border-[#560e51] shadow-[6px_6px_0px_0px_#560e51] space-y-6">
             <div className="border-b-2 border-fuchsia-100 pb-4">
               <span className="text-xs font-mono font-black uppercase text-[#9b2c98]">
-                Scripps National Spelling Bee Classroom Curriculum
+                English 1 National Spelling Bee Classroom Curriculum
               </span>
               <h3 className="text-2xl sm:text-3xl font-black text-slate-900 uppercase tracking-tight mt-1">
                 Championship Lesson Plan & Pedagogical Roadmap 📋
@@ -448,7 +448,7 @@ export default function Meeting3MasterLesson({
                 </div>
                 <h4 className="text-base font-black text-[#560e51] uppercase">Stations & Stage Simulation</h4>
                 <p className="text-xs text-slate-700 font-medium">
-                  Rotation across partner dictation, digital canvas audio stations, Wordwall 30 Mystery Boxes (16–30), and the official Scripps stage simulator.
+                  Rotation across partner dictation, digital canvas audio stations, Wordwall 30 Mystery Boxes (16–30), and the official English 1 stage simulator.
                 </p>
               </div>
             </div>
@@ -637,7 +637,7 @@ export default function Meeting3MasterLesson({
                 French Loanwords: Accents & Silent Terminations 🥐
               </h3>
               <p className="text-xs sm:text-sm font-bold text-slate-600 mt-1">
-                English borrowed thousands of words from French following the Norman Conquest of 1066. In the Scripps Bee, French loanwords are legendary traps because they keep their silent final consonants (<em>t, x</em>) and acute accent marks (<em>é</em>).
+                English borrowed thousands of words from French following the Norman Conquest of 1066. In the English 1 Bee, French loanwords are legendary traps because they keep their silent final consonants (<em>t, x</em>) and acute accent marks (<em>é</em>).
               </p>
             </div>
 
@@ -696,7 +696,7 @@ export default function Meeting3MasterLesson({
 
                     <div className="bg-white p-4 rounded-xl border-2 border-[#560e51]/20 space-y-1">
                       <span className="font-mono font-black text-rose-800 uppercase text-[10px] block">
-                        The Scripps Trap to Avoid:
+                        The English 1 Trap to Avoid:
                       </span>
                       <p className="font-bold text-rose-950">{activeData.silentTrap}</p>
                       <p className="font-bold text-slate-700 mt-2">{activeData.frenchRule}</p>
@@ -725,7 +725,7 @@ export default function Meeting3MasterLesson({
                 <div className="bg-white p-3 rounded-xl border border-fuchsia-200">
                   <strong className="block text-[#560e51] font-mono">1. Accent Aigu (é)</strong>
                   <p className="text-slate-600 text-[11px] mt-1 font-medium">
-                    Pronounced /eɪ/. Words like <em>soirée</em> require this acute accent mark to be correct in Scripps bees.
+                    Pronounced /eɪ/. Words like <em>soirée</em> require this acute accent mark to be correct in English 1 bees.
                   </p>
                 </div>
                 <div className="bg-white p-3 rounded-xl border border-fuchsia-200">

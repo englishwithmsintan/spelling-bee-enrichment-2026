@@ -95,7 +95,7 @@ export default function SpellingBeeContest({ genAlphaMode, isTeacherMode }: Spel
             <div className="flex items-center gap-2">
               <span className="text-2xl">🏆</span>
               <h2 className="font-serif text-2xl sm:text-3xl font-black text-amber-400">
-                SCRIPPS STAGE CHAMPIONSHIP
+                ENGLISH 1 NATIONAL STAGE CHAMPIONSHIP
               </h2>
             </div>
             <p className="text-xs text-amber-200/80 mt-1">

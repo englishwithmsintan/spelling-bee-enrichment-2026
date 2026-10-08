@@ -111,7 +111,7 @@ export default function LoanWordsVault({ onNavigateTab, genAlphaMode }: LoanWord
     }
   };
 
-  // 5 Official Scripps Questions
+  // 5 Official English 1 Competition Clarifying Inquiries
   const handleAskQuestion = async (qType: 'def' | 'part' | 'orig' | 'alt' | 'sent') => {
     if (isSpeaking) return;
     sound.playClick();
@@ -201,7 +201,7 @@ export default function LoanWordsVault({ onNavigateTab, genAlphaMode }: LoanWord
               <Globe className="h-4 w-4" /> Global Loan Words Vault · Etymology Lab
             </span>
             <span className="text-xs font-black uppercase font-mono bg-white/20 text-white px-3 py-1 rounded-full border border-white/40">
-              Scripps Rule 4 Clarifying Questions 🎙️
+              English 1 Competition Clarifying Inquiries 🎙️
             </span>
             <span className="text-xs font-black uppercase font-mono bg-amber-400 text-stone-950 px-3 py-1 rounded-full border border-amber-300">
               {COMPREHENSIVE_LOAN_WORDS.length} Competition Words
@@ -213,7 +213,7 @@ export default function LoanWordsVault({ onNavigateTab, genAlphaMode }: LoanWord
           </h2>
 
           <p className="text-sm sm:text-base text-fuchsia-100 font-bold leading-relaxed max-w-3xl">
-            English is the great borrower of the linguistic world! Over <strong>60% of modern English vocabulary</strong> is borrowed from French, German, Italian, Spanish, Japanese, Arabic, and Sanskrit. At the <strong>Scripps National Spelling Bee</strong>, loanwords are the ultimate deciders. Master the allowed speller questions to unlock their silent letters, acute accents, and hidden foreign roots!
+            English is the great borrower of the linguistic world! Over <strong>60% of modern English vocabulary</strong> is borrowed from French, German, Italian, Spanish, Japanese, Arabic, and Sanskrit. In the <strong>English 1 National Spelling Bee</strong>, loanwords are the ultimate deciders. Master the allowed speller clarifying inquiries to unlock their silent letters, acute accents, and hidden foreign roots!
           </p>
 
           {/* Quick Sub-Navigation */}
@@ -320,11 +320,11 @@ export default function LoanWordsVault({ onNavigateTab, genAlphaMode }: LoanWord
           <div className="bg-gradient-to-br from-[#fffdfa] to-[#fbf7ee] rounded-3xl p-6 sm:p-8 border-4 border-[#560e51] shadow-[6px_6px_0px_0px_#560e51] space-y-6">
             <div className="text-center space-y-3">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 border-2 border-amber-300 text-amber-900 text-xs font-mono font-black uppercase tracking-wider">
-                <span>🎙️ Pronouncer Podium · Scripps National Spelling Bee</span>
+                <span>🎙️ Pronouncer Podium · English 1 National Spelling Bee</span>
               </div>
 
               <p className="text-xs font-bold text-slate-600 max-w-xl mx-auto">
-                Listen to the mystery word. Before spelling, exercise your <strong>Scripps Rule 4 Rights</strong> by asking Dr. Bailly for definition, part of speech, origin, alternate pronunciations, or a sentence!
+                Listen to the mystery word. Before spelling, exercise your <strong>English 1 Competition Inquiries</strong> by asking the Pronouncer for definition, part of speech, origin, alternate pronunciations, or a sentence!
               </p>
 
               {/* Big Audio Trigger */}
@@ -733,15 +733,15 @@ export default function LoanWordsVault({ onNavigateTab, genAlphaMode }: LoanWord
       )}
 
       {/* ========================================================================= */}
-      {/* MODE 3: OFFICIAL SCRIPPS RULE 4 QUESTIONING GUIDE                         */}
+      {/* MODE 3: OFFICIAL ENGLISH 1 COMPETITION CLARIFYING INQUIRIES GUIDE         */}
       {/* ========================================================================= */}
       {subMode === 'rules' && (
         <div className="space-y-6 animate-fadeIn">
           <div className="bg-white rounded-3xl p-6 sm:p-8 border-4 border-[#560e51] shadow-[6px_6px_0px_0px_#560e51] space-y-6">
             <div className="border-b-2 border-fuchsia-100 pb-4">
-              <span className="text-xs font-mono font-black uppercase text-[#9b2c98]">Official Competition Rulebook</span>
+              <span className="text-xs font-mono font-black uppercase text-[#9b2c98]">English 1 National Spelling Bee Guidelines</span>
               <h3 className="text-2xl sm:text-3xl font-black text-slate-900 uppercase mt-1">
-                Scripps Rule 4: The Speller's Rights & Protocol 📜
+                English 1 Speller Inquiries & Stage Protocol 📜
               </h3>
               <p className="text-xs sm:text-sm font-bold text-slate-600 mt-1">
                 Knowing <em>how to ask</em> is just as important as knowing <em>how to spell</em>. Spellers who rush to spell without asking clarifying questions lose over 70% more rounds on stage!

@@ -53,6 +53,7 @@ export default function FlashcardModule({
   const [selectedFilter, setSelectedFilter] = useState<string>(
     activeMeeting === 'meeting-2' ? 'm2-know' : 'm3-know'
   );
+  const [selectedLoanOrigin, setSelectedLoanOrigin] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
@@ -73,16 +74,34 @@ export default function FlashcardModule({
         matchCat = card.category === 'meeting-2-practice-59' || card.category === 'meeting-2-words-to-know';
       } else if (selectedFilter === 'm3-full') {
         matchCat = card.category === 'meeting-3-practice-61' || card.category === 'meeting-3-words-to-know';
+      } else if (selectedFilter === 'loanwords') {
+        matchCat = card.category.startsWith('loanwords');
+        if (selectedLoanOrigin !== 'all') {
+          if (selectedLoanOrigin === 'french') matchCat = card.category === 'loanwords-french';
+          else if (selectedLoanOrigin === 'german') matchCat = card.category === 'loanwords-german';
+          else if (selectedLoanOrigin === 'italian') matchCat = card.category === 'loanwords-italian';
+          else if (selectedLoanOrigin === 'greek') matchCat = card.category === 'loanwords-greek';
+          else if (selectedLoanOrigin === 'latin') matchCat = card.category === 'loanwords-latin';
+          else if (selectedLoanOrigin === 'spanish-global') {
+            matchCat = card.category === 'loanwords-spanish' || card.category === 'loanwords-japanese' || card.category === 'loanwords';
+          }
+        }
+      } else if (selectedFilter === 'homophones') {
+        matchCat = card.category === 'homophones';
       }
 
       // Search filter
-      const matchSearch = searchQuery.trim() === '' || 
-        card.word.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        card.definition.toLowerCase().includes(searchQuery.toLowerCase());
+      const q = searchQuery.trim().toLowerCase();
+      const matchSearch = q === '' || 
+        card.word.toLowerCase().includes(q) ||
+        card.definition.toLowerCase().includes(q) ||
+        (card.languageOrigin && card.languageOrigin.toLowerCase().includes(q)) ||
+        (card.homophoneTwin && card.homophoneTwin.toLowerCase().includes(q)) ||
+        (card.trickyPattern && card.trickyPattern.toLowerCase().includes(q));
 
       return matchCat && matchSearch;
     });
-  }, [selectedFilter, searchQuery]);
+  }, [selectedFilter, selectedLoanOrigin, searchQuery]);
 
   const currentCard: Flashcard | undefined = filteredCards[currentIndex];
 
@@ -375,11 +394,13 @@ export default function FlashcardModule({
               </span>
 
               {[
-                { id: 'm2-know', label: 'Foundational Words to Know (8)' },
-                { id: 'm3-know', label: `Two-Bee Words to Know (${MEETING_3_WORDS_TO_KNOW.length})` },
-                { id: 'm2-full', label: 'Foundational Full List (59 Words)' },
-                { id: 'm3-full', label: `Two-Bee Grand List (${MEETING_3_FULL_61_WORDS.length} Words)` },
-                { id: 'all', label: 'All Championship Decks' }
+                { id: 'm3-know', label: `⭐ Two-Bee Words (${MEETING_3_WORDS_TO_KNOW.length})` },
+                { id: 'loanwords', label: '🏛️ Loanwords Vault (141)' },
+                { id: 'homophones', label: '🎙️ Homophone Showdown (45+)' },
+                { id: 'm3-full', label: `🏆 Two-Bee 61 Grand List (${MEETING_3_FULL_61_WORDS.length})` },
+                { id: 'm2-know', label: 'Foundations (8)' },
+                { id: 'm2-full', label: 'Foundations 59 List' },
+                { id: 'all', label: `🃏 All Cards (${ALL_WORD_STUDY_CARDS.length})` }
               ].map((btn) => (
                 <button
                   key={btn.id}
@@ -398,6 +419,40 @@ export default function FlashcardModule({
                 </button>
               ))}
             </div>
+
+            {/* Sub-Filter for Loanword Origins */}
+            {selectedFilter === 'loanwords' && (
+              <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t border-fuchsia-200/60 w-full animate-fadeIn">
+                <span className="text-[11px] font-black uppercase font-mono text-[#560e51] mr-1">
+                  Origins:
+                </span>
+                {[
+                  { id: 'all', label: 'All Loanwords' },
+                  { id: 'french', label: '🥐 French' },
+                  { id: 'german', label: '🥨 German' },
+                  { id: 'italian', label: '🎻 Italian' },
+                  { id: 'greek', label: '🏛️ Greek' },
+                  { id: 'latin', label: '📜 Latin' },
+                  { id: 'spanish-global', label: '🌮 Spanish & Global' },
+                ].map((pill) => (
+                  <button
+                    key={pill.id}
+                    onClick={() => {
+                      setSelectedLoanOrigin(pill.id);
+                      setCurrentIndex(0);
+                      sound.playClick();
+                    }}
+                    className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                      selectedLoanOrigin === pill.id
+                        ? 'bg-[#78c222] text-[#560e51] font-black shadow-xs'
+                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    }`}
+                  >
+                    {pill.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Flashcard / Spelling Card Container */}
@@ -441,17 +496,42 @@ export default function FlashcardModule({
                   >
                     {!isFlipped ? (
                       <div className="space-y-3">
-                        <span className="text-xs font-mono font-black uppercase tracking-widest text-[#9b2c98]">
+                        <div className="flex flex-wrap items-center justify-center gap-2">
+                          {currentCard.flag && (
+                            <span className="text-xs font-black uppercase font-mono px-3 py-1 bg-amber-100 text-amber-900 rounded-full border border-amber-300">
+                              {currentCard.flag} {currentCard.lesson || 'Loanword'}
+                            </span>
+                          )}
+                          {currentCard.group && (
+                            <span className="text-[10px] font-black uppercase font-mono px-2 py-0.5 bg-purple-100 text-[#560e51] rounded-md border border-purple-200">
+                              {currentCard.group}
+                            </span>
+                          )}
+                        </div>
+
+                        <span className="text-xs font-mono font-black uppercase tracking-widest text-[#9b2c98] block">
                           Target Study Word
                         </span>
                         <h3 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-wide uppercase">
                           {currentCard.word}
                         </h3>
-                        {currentCard.syllables && (
-                          <p className="text-sm font-mono font-bold text-slate-500">
+                        {currentCard.phoneticHint && (
+                          <p className="text-sm font-mono font-bold text-fuchsia-900">
+                            {currentCard.phoneticHint}
+                          </p>
+                        )}
+                        {currentCard.syllables && currentCard.syllables.toLowerCase() !== currentCard.word.toLowerCase() && (
+                          <p className="text-xs font-mono font-bold text-slate-500">
                             · {currentCard.syllables} ·
                           </p>
                         )}
+
+                        {currentCard.homophoneTwin && (
+                          <div className="p-2 rounded-xl bg-amber-50 border-2 border-amber-400 text-amber-950 text-xs font-bold max-w-md mx-auto">
+                            ⚠️ <strong>Homophone Trap:</strong> Sounds identical to <em>"{currentCard.homophoneTwin}"</em>!
+                          </div>
+                        )}
+
                         <div className="pt-2">
                           <button
                             onClick={handlePronounce}
@@ -460,20 +540,59 @@ export default function FlashcardModule({
                             <Volume2 className="h-4 w-4" /> Listen to Audio
                           </button>
                         </div>
-                        <span className="text-[11px] font-bold text-slate-400 block pt-3">
-                          (Click card to flip for definition & tricky patterns)
+                        <span className="text-[11px] font-bold text-slate-400 block pt-2">
+                          (Click card to flip for definition, origins & spelling clues)
                         </span>
                       </div>
                     ) : (
-                      <div className="space-y-4 text-left w-full">
+                      <div className="space-y-3.5 text-left w-full">
                         <div className="bg-[#fefaf0] p-4 rounded-2xl border-2 border-[#560e51] space-y-1">
-                          <span className="text-[10px] font-black uppercase font-mono text-amber-900 block">
-                            Definition:
-                          </span>
+                          <div className="flex items-center justify-between">
+                            <span className="text-[10px] font-black uppercase font-mono text-amber-900 block">
+                              Definition:
+                            </span>
+                            {currentCard.partOfSpeech && (
+                              <span className="text-[11px] font-mono font-bold text-slate-500 italic">
+                                ({currentCard.partOfSpeech})
+                              </span>
+                            )}
+                          </div>
                           <p className="text-sm font-black text-slate-900 leading-snug">
                             {currentCard.definition}
                           </p>
                         </div>
+
+                        {currentCard.homophoneTwin && (
+                          <div className="bg-amber-100/90 p-3.5 rounded-2xl border-2 border-amber-500 space-y-1">
+                            <span className="text-[10px] font-black uppercase font-mono text-amber-950 flex items-center gap-1.5">
+                              🎙️ English 1 Homophone Trap & Memory Hook:
+                            </span>
+                            <p className="text-xs font-black text-amber-950">
+                              Twin Sound-Alike: <span className="underline font-mono">{currentCard.homophoneTwin}</span>
+                            </p>
+                            {currentCard.memoryHook && (
+                              <p className="text-xs font-bold text-slate-900">
+                                💡 {currentCard.memoryHook}
+                              </p>
+                            )}
+                            {currentCard.spellingClue && (
+                              <p className="text-[11px] font-mono font-bold text-amber-900">
+                                🔑 Clue: {currentCard.spellingClue}
+                              </p>
+                            )}
+                          </div>
+                        )}
+
+                        {currentCard.languageOrigin && (
+                          <div className="bg-indigo-50/70 p-3 rounded-2xl border border-indigo-300">
+                            <span className="text-[10px] font-black uppercase font-mono text-indigo-900 block mb-0.5">
+                              🏛️ Language of Origin & Etymology:
+                            </span>
+                            <p className="text-xs font-bold text-indigo-950">
+                              {currentCard.languageOrigin}
+                            </p>
+                          </div>
+                        )}
 
                         {currentCard.trickyPattern && (
                           <div className="bg-amber-50 p-3.5 rounded-2xl border-2 border-amber-400">
@@ -513,6 +632,11 @@ export default function FlashcardModule({
                       <p className="text-xs font-bold text-slate-600 italic">
                         "{currentCard.definition}"
                       </p>
+                      {currentCard.homophoneTwin && (
+                        <p className="text-xs font-bold text-amber-900 bg-amber-50 p-2 rounded-xl border border-amber-300">
+                          🎙️ English 1 Homophone Sentence Context: "{currentCard.example}"
+                        </p>
+                      )}
                     </div>
 
                     <form onSubmit={handleCheckSpelling} className="space-y-3">

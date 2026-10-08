@@ -34,7 +34,7 @@ export default function ProgressTracker({
     {
       id: 'badge-words',
       title: 'Vocabulary Master 📖',
-      desc: 'Mastered 10+ official Scripps & PPT championship words.',
+      desc: 'Mastered 10+ official English 1 National Spelling Bee words.',
       unlocked: masteredVocab >= 10,
       badgeColor: 'bg-purple-400 text-purple-950 border-purple-600'
     },

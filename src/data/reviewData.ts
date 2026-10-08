@@ -1,4 +1,6 @@
 import { Flashcard, TrickyPattern, DictationWord, BoxChallenge, SpellingWord, Finalist, AuditionCandidate, MatchPair } from '../types';
+import { COMPREHENSIVE_LOAN_WORDS } from './loanWordsData';
+import { SCRIPPS_HOMOPHONE_PAIRS } from './homophonesData';
 
 // =============================================================================
 // MEETING 2: "WORD ROOTS & PATTERNS" (Grade 3–6 • 90 Minutes)
@@ -1410,11 +1412,79 @@ export const ALL_WORDS_MAP: Record<string, { def: string; ex: string; orig?: str
 };
 
 // =============================================================================
-// ASSEMBLE ALL FLASHCARDS FOR STUDY DECKS
+// ASSEMBLE ALL FLASHCARDS FOR STUDY DECKS (LOANWORDS, HOMOPHONES & MEETING WORDS)
 // =============================================================================
+export const LOANWORD_CARDS: Flashcard[] = COMPREHENSIVE_LOAN_WORDS.map((lw) => {
+  const flag = 
+    lw.language === 'French' ? '🥐' :
+    lw.language === 'German' ? '🥨' :
+    lw.language === 'Italian' ? '🎻' :
+    lw.language === 'Spanish' ? '🌮' :
+    lw.language === 'Japanese' ? '🌸' :
+    lw.language === 'Greek' ? '🏛️' :
+    lw.language === 'Latin' ? '📜' : '🌍';
+
+  let specificCat: any = 'loanwords';
+  if (lw.language === 'French') specificCat = 'loanwords-french';
+  else if (lw.language === 'German') specificCat = 'loanwords-german';
+  else if (lw.language === 'Italian') specificCat = 'loanwords-italian';
+  else if (lw.language === 'Spanish') specificCat = 'loanwords-spanish';
+  else if (lw.language === 'Greek') specificCat = 'loanwords-greek';
+  else if (lw.language === 'Latin') specificCat = 'loanwords-latin';
+  else if (lw.language === 'Japanese') specificCat = 'loanwords-japanese';
+
+  return {
+    id: `card-lw-${lw.id}`,
+    word: lw.word,
+    definition: lw.definition,
+    partOfSpeech: lw.partOfSpeech,
+    category: specificCat,
+    example: lw.sentence,
+    syllables: lw.word,
+    phoneticHint: lw.pronunciation,
+    languageOrigin: `${lw.language} · ${lw.languageOriginDetails}`,
+    trickyPattern: `${lw.spellingTip}${lw.etymologyStory ? ` — Etymology: ${lw.etymologyStory}` : ''}`,
+    lesson: `Loanwords Vault (${lw.language})`,
+    flag,
+    spellingClue: lw.spellingTip,
+    group: lw.difficulty === 'One-Bee' ? 'Group B (Grades 3–4)' : 'Group C (Grades 5–6)'
+  };
+});
+
+export const HOMOPHONE_CARDS: Flashcard[] = SCRIPPS_HOMOPHONE_PAIRS.flatMap((pair, pIdx) => {
+  return pair.words.map((item, wIdx) => {
+    const otherTwins = pair.words
+      .filter((w) => w.word.toLowerCase() !== item.word.toLowerCase())
+      .map((w) => w.word)
+      .join(' / ');
+
+    return {
+      id: `card-hp-${pIdx}-${wIdx}-${item.word}`,
+      word: item.word,
+      definition: item.definition,
+      partOfSpeech: item.partOfSpeech,
+      category: 'homophones' as const,
+      example: item.sentence,
+      syllables: item.syllables || item.word,
+      phoneticHint: item.ipa || pair.soundIpa,
+      languageOrigin: item.origin,
+      trickyPattern: `⚠️ Homophone Trap: Sounds identical to "${otherTwins}" (${pair.soundIpa}). English 1 Rule: ${pair.ruleTip}`,
+      lesson: `Homophone Showdown (${pair.category})`,
+      flag: '🎙️',
+      homophoneTwin: otherTwins,
+      homophoneTrap: pair.ruleTip,
+      memoryHook: item.memoryHook,
+      spellingClue: item.spellingClue,
+      group: pair.category === 'Grade 3-6 Staples' ? 'Group B (Grades 3–4)' : 'Group C (Grades 5–6)'
+    };
+  });
+});
+
 const RAW_WORD_STUDY_CARDS: Flashcard[] = [
   ...MEETING_2_WORDS_TO_KNOW,
   ...MEETING_3_WORDS_TO_KNOW,
+  ...LOANWORD_CARDS,
+  ...HOMOPHONE_CARDS,
   ...MEETING_2_FULL_59_WORDS.map((w, idx) => {
     const existing = [...MEETING_2_WORDS_TO_KNOW, ...MEETING_3_WORDS_TO_KNOW].find(x => x.word.toLowerCase() === w.toLowerCase());
     if (existing) return existing;
@@ -1521,50 +1591,48 @@ export const OPEN_THE_BOX_30: BoxChallenge[] = [
 ];
 
 // =============================================================================
-// SCRIPPS NATIONAL SPELLING BEE FUN FACTS & LORE
+// ENGLISH 1 NATIONAL SPELLING BEE FUN FACTS & COMPETITION LORE
 // =============================================================================
-export const SCRIPPS_LORE = [
+export const ENGLISH_1_LORE = [
   {
-    title: 'A Big Time Spellebrity!',
-    body: "If you’ve watched the Bee on ESPN, you've definitely heard Dr. Jacques Bailly's voice! He won the Scripps National Spelling Bee in 1980 and became the official pronouncer in 2003.",
-    tag: 'Bee Royalty 👑'
+    title: 'English 1 National Spelling Bee Championship!',
+    body: "English 1 hosts Indonesia's premier national spelling bee competition, empowering young learners from Grade 1 through Grade 9 across regions nationwide, culminating in the prestigious Grand Final in Jakarta!",
+    tag: 'National Final 🇮🇩'
   },
   {
-    title: 'Eight Times the Fun: Octochamps!',
-    body: "In 2019, eight brilliant spellers made Bee history and inspired a new word: 'Octochamps!' The dictionary admitted defeat when all 8 ended the finals in an unforgettable tie!",
-    tag: 'Historic Record 🏆'
+    title: 'The Golden "Say – Spell – Say" Protocol',
+    body: "In the English 1 Spelling Bee, every speller must pronounce the word clearly before spelling, spell each letter distinctly out loud, and pronounce the word once more to complete their turn. Once a letter is uttered, it cannot be changed!",
+    tag: 'Stage Rule 🎙️'
   },
   {
-    title: 'Older than Sliced Bread!',
-    body: "The National Spelling Bee was first held in 1925 in Louisville, Kentucky. That makes the Bee older than sliced bread, bubble gum, and even trampolines!",
-    tag: 'Fun History 🍞'
+    title: 'Puspresnas Recognized Excellence',
+    body: "Champions of the English 1 National Spelling Bee achieve prestigious educational certificates recognized by Puspresnas (Pusat Prestasi Nasional), opening bright pathways for scholarships and academic honors!",
+    tag: 'Prestigious Honor 🏆'
   },
   {
-    title: 'The Very First Champion (1925)',
-    body: "In 1925, Frank Neuhauser won the championship trophy among 9 spellers after correctly spelling 'gladiolus'!",
-    tag: 'Classic Word 🌺'
+    title: 'Group Divisions: Fair & Rigorous!',
+    body: "The competition divides spellers into tailored grade brackets: Group A (Grades 1–2), Group B (Grades 3–4), Group C (Grades 5–6), and Group D (Grades 7–9), ensuring grade-level orthographic mastery.",
+    tag: 'Grade Brackets 📚'
   },
   {
-    title: 'In Good Company: 11 Million Spellers',
-    body: "More than 11 million students participate in qualifying classroom, school, district, and regional spelling bees around the globe every year!",
-    tag: 'Global Scale 🌍'
+    title: 'The Pronouncer 3-Step Protocol',
+    body: "The English 1 pronouncer adheres to the standard 3-step sequence: Word ➔ Context Sentence ➔ Word. Spellers may also request definitions, language of origin, and part of speech!",
+    tag: 'Pronouncer Podium 🏛️'
   },
   {
-    title: 'It’s All Greek to Me!',
-    body: "Most difficult English bee words are borrowed from Greek (ph, y, ch), Latin, and French loanwords. Once you learn their roots, spelling becomes simple!",
-    tag: 'Word Detective 🔍'
+    title: 'It’s All Greek, Latin & French Loanwords!',
+    body: "Championship final rounds test loanwords borrowed from French (silent consonants and accents), German, Italian musical terms, and Greek scientific roots. Knowing word origins unlocks 100% spelling accuracy!",
+    tag: 'Etymology Key 🔍'
   },
   {
-    title: 'Cruising the Airwaves',
-    body: "The first broadcast of the Bee was on radio in 1946 before being televised! ESPN has broadcast the finals live across the world since 1994.",
-    tag: 'On the Air 🎙️'
-  },
-  {
-    title: 'Home Sweet Home Hive',
-    body: "While many people assume the Bee is headquartered in Washington, D.C., the National Spelling Bee hive is actually located in Cincinnati, Ohio!",
-    tag: 'Bee Hive 🐝'
+    title: 'Two-Speller Sudden Death Showdown',
+    body: "When only two spellers remain in the National Final, if one misspells, the other speller must correctly spell that missed word plus one new championship word to claim the National Trophy!",
+    tag: 'Championship Duel 🐝'
   }
 ];
+
+// Backwards-compatible alias for any legacy imports
+export const SCRIPPS_LORE = ENGLISH_1_LORE;
 
 // Backward-compatible SPELLING_BEE_WORDS list
 export const SPELLING_BEE_WORDS: SpellingWord[] = ALL_WORD_STUDY_CARDS.map((card, idx) => ({

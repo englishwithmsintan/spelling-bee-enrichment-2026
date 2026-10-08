@@ -271,7 +271,7 @@ export default function PatternReviewLab({
               Latin · Greek · French · German · Italian · Spanish
             </span>
             <span className="text-xs font-black uppercase font-mono bg-amber-400 text-slate-950 px-3 py-1 rounded-full border border-amber-300">
-              Scripps Rule 4 Homophone Keys ⚖️
+              English 1 Homophone Protocol ⚖️
             </span>
           </div>
 
@@ -321,7 +321,7 @@ export default function PatternReviewLab({
             >
               <Scale className="w-4 h-4" />
               <span>3. Origin Homophones</span>
-              <span className="text-[10px] font-mono opacity-80">Scripps Rule 4 Solver</span>
+              <span className="text-[10px] font-mono opacity-80">English 1 Protocol Solver</span>
             </button>
 
             <button
@@ -434,7 +434,7 @@ export default function PatternReviewLab({
                           Rule #{idx + 1}
                         </span>
                         <span className="text-[10px] font-mono font-bold bg-purple-100 text-purple-900 px-2 py-0.5 rounded-md">
-                          Scripps Certified
+                          English 1 Certified
                         </span>
                       </div>
                       <h5 className="text-sm font-black text-slate-900 uppercase">
@@ -744,7 +744,7 @@ export default function PatternReviewLab({
             <div className="border-b-2 border-stone-200 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <span className="text-xs font-mono font-black uppercase text-[#9b2c98] bg-fuchsia-50 px-3 py-1 rounded-full border border-fuchsia-200">
-                  Scripps Rule 4 Drill · Case #{homophoneIndex + 1} of {homophoneDrills.length}
+                  English 1 Protocol Drill · Case #{homophoneIndex + 1} of {homophoneDrills.length}
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-black text-slate-900 uppercase mt-1">
                   Solving Homophones with Language of Origin ⚖️
@@ -786,7 +786,7 @@ export default function PatternReviewLab({
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div>
                     <span className="text-[11px] font-mono font-black uppercase text-[#560e51]">
-                      Speller's Right (Scripps Rule 4):
+                      Speller Inquiry (English 1 Protocol):
                     </span>
                     <p className="text-xs font-bold text-slate-800">
                       "Could you please tell me the language of origin and meaning?"

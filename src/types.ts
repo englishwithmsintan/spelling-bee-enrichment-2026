@@ -8,6 +8,15 @@ export type WordListSource =
   | 'meeting-2-practice-59'
   | 'meeting-3-words-to-know'
   | 'meeting-3-practice-61'
+  | 'loanwords'
+  | 'loanwords-french'
+  | 'loanwords-german'
+  | 'loanwords-italian'
+  | 'loanwords-spanish'
+  | 'loanwords-greek'
+  | 'loanwords-latin'
+  | 'loanwords-japanese'
+  | 'homophones'
   | 'one-bee'
   | 'two-bee'
   | 'three-bee';
@@ -63,6 +72,12 @@ export interface Flashcard {
   trickyPattern?: string;
   lesson?: string;
   funFact?: string;
+  flag?: string;
+  homophoneTwin?: string;
+  homophoneTrap?: string;
+  memoryHook?: string;
+  spellingClue?: string;
+  group?: string;
 }
 
 export type PatternCategory = 
