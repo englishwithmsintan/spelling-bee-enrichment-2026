@@ -524,13 +524,13 @@ export const COMPREHENSIVE_ORIGIN_GUIDES: OriginLanguageGuide[] = [
   },
 
   // ==========================================
-  // 8. SCRIPPS HOMOPHONE TRAPS (Rule 4)
+  // 8. ENGLISH 1 HOMOPHONE TRAPS (Competition Standard)
   // ==========================================
   {
     id: 'homophones',
-    name: 'Scripps Homophone Traps',
+    name: 'English 1 Homophone Traps',
     flag: '⚖️',
-    subtitle: 'Rule 4 in Action: When Words Sound Identical, Etymology & Definitions Unlock the Code',
+    subtitle: 'Competition Strategy in Action: When Words Sound Identical, Etymology & Definitions Unlock the Code',
     colorScheme: {
       bg: 'bg-purple-50',
       border: 'border-purple-300',
@@ -788,7 +788,7 @@ export default function OriginPatternDetective({
                 Expanded Linguistic Detective Lab · 25-Minute Deep Focus
               </span>
               <span className="text-xs font-mono font-black bg-[#78c222] text-[#560e51] px-2 py-0.5 rounded-full border border-[#560e51]">
-                Scripps Strategy
+                English 1 Strategy
               </span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-950 uppercase tracking-tight">
@@ -969,7 +969,7 @@ export default function OriginPatternDetective({
 
                 {/* Speller Danger Warning */}
                 <div className="p-2.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-900 text-[11px] font-bold">
-                  <strong>⚠️ Scripps Stage Warning:</strong> {rule.spellingTrap}
+                  <strong>⚠️ English 1 Stage Warning:</strong> {rule.spellingTrap}
                 </div>
               </div>
             ))}

@@ -1,4 +1,4 @@
-// Type definitions for Spelling Bee Enrichment Session & Scripps Words of the Champions
+// Type definitions for Spelling Bee Enrichment Session & English 1 National Spelling Bee Competition
 
 export type MeetingSession = 'meeting-2' | 'meeting-3' | 'all';
 
@@ -95,6 +95,7 @@ export interface DictationWord {
 
 export interface BoxChallenge {
   boxNumber: number;
+  id?: number;
   word: string;
   definition: string;
   sentence: string;
@@ -191,9 +192,9 @@ export interface HomophoneWord {
 export interface HomophonePair {
   id: string;
   soundIpa: string;
-  category: 'Grade 3-6 Staples' | 'Scripps Two-Bee Traps' | 'Championship Finalists';
+  category: 'Grade 3-6 Staples' | 'English 1 Stage Traps' | 'Scripps Two-Bee Traps' | 'Championship Finalists';
   targetWord: string; // The word the pronouncer has selected in the drill
-  ruleTip: string; // Official Scripps Rule 4 guidance
+  ruleTip: string; // English 1 Competition Homophone guidance
   words: HomophoneWord[];
 }
 

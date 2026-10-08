@@ -1,5 +1,5 @@
 // Authoritative Linguistic Rules & Origin Distinguishing Patterns
-// for Scripps National Spelling Bee Enrichment (Grade 3-6 & Champions)
+// for English 1 National Spelling Bee Competition (Puspresnas Recognized)
 
 export interface LanguageOriginGuide {
   id: string;
@@ -557,7 +557,7 @@ export const LANGUAGE_ORIGIN_GUIDES: LanguageOriginGuide[] = [
         word: 'guerrilla',
         pronunciation: '/ɡəˈrɪl.ə/ (guh-RIL-uh)',
         definition: 'A member of a small independent group taking part in irregular fighting, typically against larger regular forces.',
-        keyPattern: 'Starts with "gue-", double r ("rr"), and double l ("ll"). Classic Scripps homophone!',
+        keyPattern: 'Starts with "gue-", double r ("rr"), and double l ("ll"). Classic English 1 stage homophone!',
         etymology: 'Spanish guerrilla (little war), diminutive of guerra (war).',
         sentence: 'The guerrilla forces utilized their intimate knowledge of the mountainous terrain.'
       },

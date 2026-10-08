@@ -914,13 +914,13 @@ export default function Meeting3MasterLesson({
             <div className="border-b-2 border-fuchsia-100 pb-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
                 <span className="text-xs font-mono font-black uppercase text-[#9b2c98] bg-fuchsia-50 px-3 py-1 rounded-full border border-fuchsia-200">
-                  Scripps Etymology Secret Weapon
+                  English 1 Competition Etymology Key
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-black text-slate-900 uppercase tracking-tight mt-1">
                   How to Distinguish Words by Origin 🏛️🥐🏺🥨🎻
                 </h3>
                 <p className="text-xs sm:text-sm font-bold text-slate-600 mt-1 max-w-3xl">
-                  Asking <strong>"What is the language of origin?"</strong> is the single most powerful tool on the Scripps stage. Compare how each language spells sounds and prefixes:
+                  Asking <strong>"What is the language of origin?"</strong> is the single most powerful strategy in the English 1 National Spelling Bee. Compare how each language spells sounds and prefixes:
                 </p>
               </div>
 
@@ -1055,7 +1055,7 @@ export default function Meeting3MasterLesson({
             <div className="p-5 rounded-2xl bg-[#fefaf0] border-3 border-[#560e51] space-y-3">
               <h4 className="text-base font-black uppercase text-[#560e51] flex items-center gap-2">
                 <Scale className="w-5 h-5 text-amber-600" />
-                How Origin Disarms Deadly Homophone Traps (Scripps Rule 4):
+                How Origin Disarms Deadly Homophone Traps (English 1 Competition Standard):
               </h4>
               <p className="text-xs font-bold text-slate-700">
                 When you hear a sound like <strong>/ɡəˈrɪl.ə/</strong> or <strong>/ˈkɑːm.plə.mənt/</strong>, spelling from sound alone is a 50/50 gamble. Look how origin gives you 100% accuracy:
@@ -1160,11 +1160,11 @@ export default function Meeting3MasterLesson({
         });
 
         const activeSpotlight = ALL_WORDS_MAP[spotlightWord] || {
-          def: 'Official Scripps Words of the Champions Two-Bee Word',
+          def: 'Official English 1 National Spelling Bee Competition Word',
           ex: `The speller spelled ${spotlightWord} with confidence.`,
           syll: spotlightWord,
           orig: 'English',
-          pattern: 'Advanced Two-Bee Orthography'
+          pattern: 'Advanced English 1 Orthography'
         };
 
         return (
@@ -1184,7 +1184,7 @@ export default function Meeting3MasterLesson({
                     </span>
                   </h3>
                   <p className="text-xs sm:text-sm font-bold text-slate-600 mt-1">
-                    Carefully curated and pattern-aligned for grades 3–6. Every word maps directly to French loanword phonology, Greek morphology, and high-level Scripps orthography.
+                    Carefully curated and pattern-aligned for grades 3–6. Every word maps directly to French loanword phonology, Greek morphology, and official English 1 competition orthography.
                   </p>
                 </div>
 
@@ -1374,10 +1374,10 @@ export default function Meeting3MasterLesson({
                 <Volume2 className="h-4 w-4 text-[#78c222]" /> Listening Lab & Auditory Training
               </span>
               <h3 className="text-2xl sm:text-3xl font-black text-slate-900 uppercase tracking-tight mt-1">
-                The Dr. Jacques Bailly Audio Dictation Lab 🎧
+                English 1 Audio Dictation Lab 🎧
               </h3>
               <p className="text-xs sm:text-sm font-bold text-slate-600 mt-1">
-                Listen to the official Scripps pronouncer cadence. Click any word to hear it pronounced cleanly, review its syllable breakdown, and test your auditory spelling!
+                Listen to the official English 1 pronouncer cadence. Click any word to hear it pronounced cleanly, review its syllable breakdown, and test your auditory spelling!
               </p>
             </div>
 

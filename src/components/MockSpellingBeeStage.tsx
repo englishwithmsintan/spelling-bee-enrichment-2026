@@ -182,13 +182,13 @@ export default function MockSpellingBeeStage({ onAwardTeamScore, genAlphaMode }:
             </span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 uppercase tracking-tight flex items-center gap-2">
-            <span>Mock Spelling Bee Stage</span>
+            <span>English 1 Spelling Bee Stage</span>
             <Trophy className="h-7 w-7 text-amber-500" />
           </h2>
           <p className="text-xs sm:text-sm font-bold text-slate-600 mt-1 max-w-2xl">
             {genAlphaMode 
-              ? "Step up to the championship mic! Open the 30 mystery boxes, follow Scripps stage protocols, and claim the golden bee cup!" 
-              : "Experience the Scripps stage simulation and interactive 30-Box Wordwall challenge using official Two-Bee championship competition words."}
+              ? "Step up to the English 1 championship mic! Open the 30 mystery boxes, follow the Say-Spell-Say protocol, and claim the Jakarta Grand Final trophy!" 
+              : "Experience the official English 1 National Spelling Bee stage simulation and interactive 30-Box challenge aligned with Puspresnas Group B (Grades 3–4) & Group C standards."}
           </p>
         </div>
 
@@ -244,48 +244,80 @@ export default function MockSpellingBeeStage({ onAwardTeamScore, genAlphaMode }:
       {activeTab === 'rules' && (
         <div className="bg-white rounded-3xl p-6 sm:p-8 border-4 border-[#560e51] shadow-[6px_6px_0px_0px_#560e51] space-y-6">
           <div className="border-b-2 border-fuchsia-100 pb-4">
-            <span className="text-xs font-mono font-black uppercase text-[#9b2c98]">Slide 9 · Official Classroom & Scripps Stage Protocol</span>
-            <h3 className="text-2xl font-black text-slate-900 uppercase">Spelling Bee Stage Rules</h3>
+            <div className="flex flex-wrap items-center gap-2 mb-1">
+              <span className="text-xs font-mono font-black uppercase text-[#9b2c98]">
+                Slide 9 · Official English 1 National Spelling Bee Protocol
+              </span>
+              <span className="text-[10px] font-mono font-black uppercase bg-[#78c222] text-[#560e51] px-2 py-0.5 rounded-full border border-[#560e51]">
+                Puspresnas Recognized · Jakarta Final
+              </span>
+            </div>
+            <h3 className="text-2xl font-black text-slate-900 uppercase">
+              English 1 Competition Rules & "Say – Spell – Say" Protocol
+            </h3>
+            <p className="text-xs sm:text-sm font-bold text-slate-600 mt-1">
+              Official guidelines for Group B (Grades 3–4) and Group C (Grades 5–6) participants competing in the English 1 National Spelling Bee.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="p-5 rounded-2xl border-3 border-[#560e51] bg-[#fdf2fe] space-y-2 shadow-[3px_3px_0px_0px_#560e51]">
               <div className="flex items-center gap-3">
                 <span className="w-8 h-8 rounded-full bg-[#560e51] text-white font-black flex items-center justify-center font-mono">1</span>
-                <h4 className="font-black text-slate-900 text-lg uppercase">Listen Carefully</h4>
+                <h4 className="font-black text-slate-900 text-base uppercase">Pronouncer 3-Step Protocol</h4>
               </div>
               <p className="text-xs font-bold text-slate-700 pl-11">
-                Listen to the word, its meaning, and a sample sentence before you begin spelling. Pay close attention to the pronouncer!
+                The pronouncer delivers each word in 3 steps: <strong>1. Says the word clearly</strong> ➔ <strong>2. Reads the sentence</strong> ➔ <strong>3. Repeats the word</strong>.
               </p>
             </div>
 
             <div className="p-5 rounded-2xl border-3 border-[#560e51] bg-[#fefaf0] space-y-2 shadow-[3px_3px_0px_0px_#560e51]">
               <div className="flex items-center gap-3">
                 <span className="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-black flex items-center justify-center font-mono">2</span>
-                <h4 className="font-black text-slate-900 text-lg uppercase">Ask Clarifying Questions</h4>
+                <h4 className="font-black text-slate-900 text-base uppercase">Mandatory "Say – Spell – Say"</h4>
               </div>
               <p className="text-xs font-bold text-slate-700 pl-11">
-                Ask a question if you need to! You may say: <em>"Can you repeat it?"</em>, <em>"May I have the definition?"</em>, or <em>"Can you use it in a sentence?"</em>
+                Spellers must <strong>SAY</strong> the word first, <strong>SPELL</strong> each letter loudly and clearly, then <strong>SAY</strong> the word again to conclude.
               </p>
             </div>
 
             <div className="p-5 rounded-2xl border-3 border-[#560e51] bg-[#f3f9eb] space-y-2 shadow-[3px_3px_0px_0px_#560e51]">
               <div className="flex items-center gap-3">
                 <span className="w-8 h-8 rounded-full bg-[#78c222] text-[#560e51] font-black flex items-center justify-center font-mono">3</span>
-                <h4 className="font-black text-slate-900 text-lg uppercase">Say Each Letter Out Loud</h4>
+                <h4 className="font-black text-slate-900 text-base uppercase">Permitted Inquiries</h4>
               </div>
               <p className="text-xs font-bold text-slate-700 pl-11">
-                Say each letter out loud, one at a time, loud and clear into the microphone. Once a letter is spoken, it cannot be changed!
+                Before spelling, contestants may ask: <em>"Can you repeat the word?"</em>, <em>"May I have the definition?"</em>, <em>"Part of speech?"</em>, or <em>"Language of origin?"</em>.
               </p>
             </div>
 
             <div className="p-5 rounded-2xl border-3 border-[#560e51] bg-[#f5f3ff] space-y-2 shadow-[3px_3px_0px_0px_#560e51]">
               <div className="flex items-center gap-3">
                 <span className="w-8 h-8 rounded-full bg-[#9b2c98] text-white font-black flex items-center justify-center font-mono">4</span>
-                <h4 className="font-black text-slate-900 text-lg uppercase">Stand Proud</h4>
+                <h4 className="font-black text-slate-900 text-base uppercase">No Retracing Letters</h4>
               </div>
               <p className="text-xs font-bold text-slate-700 pl-11">
-                Stand up when your word is called! Take a steady deep breath, face the judges, and give it your absolute best effort.
+                Once a letter is spoken into the microphone, it cannot be changed or retraced. Think carefully before uttering the first letter!
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl border-3 border-[#560e51] bg-[#fff5f5] space-y-2 shadow-[3px_3px_0px_0px_#560e51]">
+              <div className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-rose-600 text-white font-black flex items-center justify-center font-mono">5</span>
+                <h4 className="font-black text-slate-900 text-base uppercase">Elimination & Judges</h4>
+              </div>
+              <p className="text-xs font-bold text-slate-700 pl-11">
+                A single error leads to elimination in the finals. The judge announces "Incorrect" and gives the correct spelling. The next speller receives a new word.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl border-3 border-[#560e51] bg-[#eef2ff] space-y-2 shadow-[3px_3px_0px_0px_#560e51]">
+              <div className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-indigo-600 text-white font-black flex items-center justify-center font-mono">6</span>
+                <h4 className="font-black text-slate-900 text-base uppercase">2-Speller Final Finish</h4>
+              </div>
+              <p className="text-xs font-bold text-slate-700 pl-11">
+                When only two spellers remain, if one misspells, the other must spell that word correctly PLUS one additional championship word to win!
               </p>
             </div>
           </div>
@@ -577,23 +609,46 @@ export default function MockSpellingBeeStage({ onAwardTeamScore, genAlphaMode }:
 
           {/* Pronouncer Console */}
           <div className="bg-[#fefaf0] p-6 rounded-2xl border-3 border-[#560e51] shadow-[4px_4px_0px_0px_#560e51] text-center space-y-4">
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex flex-wrap items-center justify-center gap-2">
               <span className="text-xs font-mono font-black uppercase text-amber-900">
-                Dr. Jacques Bailly Pronouncer Podium · Scripps Rule 4 Allowed Questions
+                English 1 Official Pronouncer Podium · 3-Step Protocol & Clarifying Questions
+              </span>
+              <span className="text-[10px] font-mono font-black uppercase bg-[#78c222] text-[#560e51] px-2 py-0.5 rounded-full border border-[#560e51]">
+                Group B & C Competition
               </span>
             </div>
 
-            <button
-              onClick={() => {
-                sound.playClick();
-                humanVoice.speakWord(currentStageWord.word);
-              }}
-              className="px-8 py-4 bg-[#560e51] hover:bg-[#43093f] text-white font-black text-base uppercase rounded-2xl border-2 border-[#560e51] shadow-[3px_3px_0px_0px_#78c222] flex items-center justify-center gap-3 mx-auto cursor-pointer"
-            >
-              <Volume2 className="h-6 w-6 text-[#78c222]" /> Listen to Word at the Mic
-            </button>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <button
+                onClick={() => {
+                  sound.playClick();
+                  humanVoice.speakWord(currentStageWord.word);
+                }}
+                className="px-6 py-3.5 bg-[#560e51] hover:bg-[#43093f] text-white font-black text-sm uppercase rounded-2xl border-2 border-[#560e51] shadow-[3px_3px_0px_0px_#78c222] flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Volume2 className="h-5 w-5 text-[#78c222]" /> 1. Say Word
+              </button>
 
-            {/* Allowed Clarifying Questions (Official Scripps Rule 4: Speller's Role) */}
+              <button
+                onClick={() => {
+                  sound.playLetterKey();
+                  const clues = getStageWordClues();
+                  // English 1 3-step: Word -> Sentence -> Word
+                  humanVoice.speakWord(currentStageWord.word);
+                  setTimeout(() => {
+                    humanVoice.speakSentence(clues.sentence);
+                    setTimeout(() => {
+                      humanVoice.speakWord(currentStageWord.word);
+                    }, 3500);
+                  }, 1200);
+                }}
+                className="px-6 py-3.5 bg-[#78c222] hover:bg-[#68ab1c] text-[#560e51] font-black text-sm uppercase rounded-2xl border-2 border-[#560e51] shadow-[3px_3px_0px_0px_#560e51] flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Sparkles className="h-5 w-5 text-[#560e51]" /> English 1 Full 3-Step (Word ➔ Sentence ➔ Word)
+              </button>
+            </div>
+
+            {/* Allowed Clarifying Questions (Official English 1 Competition Inquiries) */}
             <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
               <button
                 onClick={() => {

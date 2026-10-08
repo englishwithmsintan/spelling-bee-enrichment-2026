@@ -662,7 +662,7 @@ export const MEETING_3_WORDS_TO_KNOW: Flashcard[] = [
     languageOrigin: 'French / Latin (personnel)',
     trickyPattern: "Double 'n', single 'l': p-e-r-s-o-n-n-e-l (do not confuse with 'personal')!",
     lesson: 'Meeting 3 · Round 3',
-    funFact: "Classic Scripps trap word: 'personal' has 1 'n' and 1 'l', while 'personnel' has 2 'n's!"
+    funFact: "Classic competition trap word: 'personal' has 1 'n' and 1 'l', while 'personnel' has 2 'n's!"
   },
   {
     id: 'm3-r3-3',
@@ -1232,7 +1232,7 @@ export const ALL_WORDS_MAP: Record<string, { def: string; ex: string; orig?: str
   favorite: { def: 'preferred before all others of the same kind', ex: 'Spelling Bee is my favorite academic contest.', syll: 'fa-vor-ite', orig: 'Latin', pattern: "American 'favorite'" },
   famous: { def: 'known about by many people', ex: 'Dr. Jacques Bailly is famous across the spelling world.', syll: 'fa-mous', orig: 'Latin', pattern: "Ends in '-ous'" },
   pristine: { def: 'in its original condition; unspoiled and spotless', ex: 'The new dictionary arrived in pristine condition.', syll: 'pris-tine', orig: 'Latin', pattern: "Ends in silent 'e'" },
-  golden: { def: 'made of, resembling, or shining like gold', ex: 'The winner lifted the golden Scripps trophy.', syll: 'gold-en', orig: 'Old English', pattern: "Root 'gold' + '-en'" },
+  golden: { def: 'made of, resembling, or shining like gold', ex: 'The winner lifted the golden English 1 trophy.', syll: 'gold-en', orig: 'Old English', pattern: "Root 'gold' + '-en'" },
   modesty: { def: 'the quality of being humble and unpretentious', ex: 'She received the prize with genuine modesty.', syll: 'mod-es-ty', orig: 'Latin', pattern: "m-o-d-e-s-t-y" },
   jealousy: { def: 'resentment against someone because of their success', ex: 'Do not let jealousy cloud good sportsmanship.', syll: 'jeal-ous-y', orig: 'Old French', pattern: "Starts with 'j-e-a-l'" },
   vouch: { def: 'confirm or assert as a result of experience', ex: 'Her coach will vouch for her intense daily practice.', syll: 'vouch', orig: 'Old French', pattern: "v-o-u-c-h" },
@@ -1419,7 +1419,7 @@ const RAW_WORD_STUDY_CARDS: Flashcard[] = [
     const existing = [...MEETING_2_WORDS_TO_KNOW, ...MEETING_3_WORDS_TO_KNOW].find(x => x.word.toLowerCase() === w.toLowerCase());
     if (existing) return existing;
     const detail = ALL_WORDS_MAP[w.toLowerCase()] || {
-      def: 'Official Scripps Words of the Champions study word',
+      def: 'Official English 1 National Spelling Bee study word',
       ex: `We practiced spelling '${w}' in our bee preparation session.`,
       syll: w,
       pattern: 'Standard pattern'
@@ -1441,10 +1441,10 @@ const RAW_WORD_STUDY_CARDS: Flashcard[] = [
     const existing = [...MEETING_2_WORDS_TO_KNOW, ...MEETING_3_WORDS_TO_KNOW].find(x => x.word.toLowerCase() === w.toLowerCase());
     if (existing) return existing;
     const detail = ALL_WORDS_MAP[w.toLowerCase()] || {
-      def: 'Advanced Two-Bee Scripps Words of the Champions study word',
+      def: 'Advanced English 1 National Spelling Bee study word',
       ex: `The contestant correctly enunciated '${w}' on stage.`,
       syll: w,
-      pattern: 'Advanced Two-Bee pattern'
+      pattern: 'Advanced English 1 pattern'
     };
     return {
       id: `m3-card-${idx}-${w}`,

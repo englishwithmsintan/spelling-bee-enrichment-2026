@@ -551,7 +551,7 @@ export default function ProgressCheckModule({
               Official Spelling Bee Enrichment Certificate
             </h4>
             <p className="text-xs font-bold text-slate-600 max-w-lg mx-auto">
-              Awarded for exceptional determination, orthographic curiosity, and mastering words from the Scripps Words of the Champions curriculum.
+              Awarded for exceptional determination, orthographic curiosity, and mastering words from the English 1 National Spelling Bee curriculum (Puspresnas Licensed).
             </p>
             <div className="pt-2">
               <button

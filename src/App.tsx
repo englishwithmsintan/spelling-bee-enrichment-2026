@@ -288,7 +288,7 @@ export default function App() {
                   CHAMPION SPELLER AURA MODE ACTIVE! (+9999 Orthographic Aura)
                 </p>
                 <p className="text-xs font-bold text-fuchsia-100">
-                  Silent letter traps decoded, Greek root rizz unlocked, and Scripps stage confidence maxed out!
+                  Silent letter traps decoded, Greek root rizz unlocked, and English 1 stage confidence maxed out!
                 </p>
               </div>
             </div>
@@ -431,7 +431,7 @@ export default function App() {
                   }`}
                 >
                   <Scale className="w-3.5 h-3.5 text-amber-600" />
-                  <span>Rule 4 Homophone Arena</span>
+                  <span>English 1 Homophone Arena</span>
                 </button>
                 <button
                   onClick={() => { setStage4SubView('mock-bee'); sound.playClick(); }}
@@ -451,7 +451,7 @@ export default function App() {
                       : 'bg-fuchsia-50 text-[#560e51] hover:bg-fuchsia-100 border border-fuchsia-200'
                   }`}
                 >
-                  🎮 Classroom Arena
+                  🃏 Classroom Word Card Games
                 </button>
               </>
             )}

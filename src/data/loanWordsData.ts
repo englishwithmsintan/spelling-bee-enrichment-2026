@@ -1541,7 +1541,7 @@ export const COMPREHENSIVE_LOAN_WORDS: LoanWord[] = [
     pronunciation: '/kəˈrɪk.jə.ləm/ (kuh-RIK-yuh-luhm)',
     alternatePronunciations: ['/kəˈrɪk.jʊ.ləm/ (kuh-RIK-yoo-luhm)'],
     definition: 'The subjects comprising a course of study in a school or college.',
-    sentence: 'The academy expanded its English curriculum to include etymological roots and Scripps competition words.',
+    sentence: 'The academy expanded its English curriculum to include etymological roots and English 1 competition words.',
     spellingTip: 'Double r ("rr") from Latin currere; ends in the neuter noun suffix "-um". Plural can be curricula or curriculums.',
     etymologyStory: 'In Rome, a curriculum was literally a circular racetrack for chariots. In universities, it became the "course" students ran to graduate.',
     difficulty: 'Two-Bee'
@@ -1939,7 +1939,7 @@ export const COMPREHENSIVE_LOAN_WORDS: LoanWord[] = [
     alternatePronunciations: ['/ˈrɪð.m/ (RITH-m)'],
     definition: 'A strong, regular, repeated pattern of movement or sound.',
     sentence: 'The speller tapped her foot in steady rhythm to pace each pronounced letter.',
-    spellingTip: 'Classic Scripps trap! Begins with "rh-", vowel is "y", contains "th", and ends in "m": "r-h-y-t-h-m". NO vowels except y!',
+    spellingTip: 'Classic competition trap! Begins with "rh-", vowel is "y", contains "th", and ends in "m": "r-h-y-t-h-m". NO vowels except y!',
     etymologyStory: 'Cognate with rhein (to flow, which also gave diarrhea and rheum). Rhythm is literally measured flow.',
     difficulty: 'Two-Bee'
   },

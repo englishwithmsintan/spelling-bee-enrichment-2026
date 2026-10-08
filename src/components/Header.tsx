@@ -78,7 +78,7 @@ export const MEETING_STAGES: StageInfo[] = [
     targetRange: '55:00 – 80:00',
     title: 'Homophone Arena & Stage Mic',
     shortLabel: '4. Homophones & Bee',
-    subtitle: 'Rule 4 Homophone showdown, Jacques Bailly stage mic & 30 mystery boxes',
+    subtitle: 'English 1 Homophone showdown, Say-Spell-Say stage mic & 30 mystery boxes',
     icon: Award
   },
   {
@@ -333,11 +333,11 @@ export default function Header({
                   SDIT Auliya · 90-Minute Enrichment Session
                 </span>
                 <span className="hidden md:inline-flex bg-[#78c222] text-[#560e51] text-[10px] font-black uppercase px-2 py-0.2 rounded-full border border-[#560e51]">
-                  Scripps 2024–2025
+                  English 1 Competition · Group B (Gr. 3–4)
                 </span>
               </div>
               <h1 className="text-base sm:text-xl font-black font-sans tracking-tight text-slate-950 uppercase flex items-center gap-2 mt-0.5">
-                <span>Words of the Champions</span>
+                <span>English 1 Spelling Bee Arena</span>
               </h1>
             </div>
           </div>

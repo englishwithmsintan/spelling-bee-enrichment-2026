@@ -143,7 +143,7 @@ export default function FlashcardModule({
               Session Agenda: Part 3 (20 min)
             </span>
             <span className="text-xs font-black uppercase font-mono px-3 py-1 bg-purple-100 text-[#560e51] rounded-full border border-purple-300">
-              Scripps Words of the Champions Deck
+              English 1 National Spelling Bee Deck
             </span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 uppercase tracking-tight">
@@ -151,8 +151,8 @@ export default function FlashcardModule({
           </h2>
           <p className="text-xs sm:text-sm font-bold text-slate-600 mt-1 max-w-2xl">
             {genAlphaMode 
-              ? "Study the official Scripps Words of the Champions list! Flip interactive flashcards or inspect the full printable take-home sheets!" 
-              : "Study the complete curated championship lists: Foundational Roots & Patterns (59 words) and Two-Bee Championship Arsenal (125 words)."}
+              ? "Study the official English 1 National Spelling Bee word list! Flip interactive flashcards or inspect the full printable take-home sheets!" 
+              : "Study the complete curated championship lists: Foundational Roots & Patterns (59 words) and English 1 Championship Arsenal (125 words)."}
           </p>
         </div>
 
@@ -201,7 +201,7 @@ export default function FlashcardModule({
                     : 'Championship Two-Bee Arsenal & Loan Words'}
                 </h3>
                 <p className="text-xs text-slate-600 font-bold mt-0.5">
-                  Advanced Spelling Bee Enrichment · Scripps Words of the Champions (Grades 3–6)
+                  Advanced Spelling Bee Enrichment · English 1 National Spelling Bee (Group B & C)
                 </p>
               </div>
 
@@ -240,7 +240,7 @@ export default function FlashcardModule({
                 <h4 className="text-lg font-black uppercase tracking-tight text-[#560e51] flex items-center gap-2">
                   <Sparkles className="h-5 w-5 text-amber-500" /> Words to Know ({handoutMeeting === 'meeting-2' ? '8 Key Study Words' : `${MEETING_3_WORDS_TO_KNOW.length} In-Depth Study Words`})
                 </h4>
-                <span className="text-xs font-mono font-bold text-slate-500">Official Scripps Definitions</span>
+                <span className="text-xs font-mono font-bold text-slate-500">Official English 1 Definitions</span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -310,7 +310,7 @@ export default function FlashcardModule({
                   Full Practice Word List ({handoutMeeting === 'meeting-2' ? '59 Words' : `${MEETING_3_FULL_61_WORDS.length} Words`})
                 </h4>
                 <span className="text-xs font-mono font-bold text-slate-500">
-                  Scripps Words of the Champions
+                  English 1 National Spelling Bee
                 </span>
               </div>
 
@@ -416,7 +416,7 @@ export default function FlashcardModule({
                       Card {currentIndex + 1} of {filteredCards.length}
                     </span>
                     <span className="text-xs font-bold font-mono text-slate-500">
-                      {currentCard.lesson || 'Scripps Champion Deck'}
+                      {currentCard.lesson || 'English 1 Champion Deck'}
                     </span>
                   </div>
 

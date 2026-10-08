@@ -82,7 +82,7 @@ export default function ListeningStations({ onAwardTeamScore, genAlphaMode, acti
 
   const currentPartnerWordString = partnerWordList[partnerIndex % partnerWordList.length];
   const partnerDetail = ALL_WORDS_MAP[currentPartnerWordString.toLowerCase()] || {
-    def: 'Official Scripps Words of the Champions study word',
+    def: 'Official English 1 National Spelling Bee study word',
     ex: `The student spelled '${currentPartnerWordString}' with precision.`,
     pattern: 'Practice carefully'
   };
@@ -117,7 +117,7 @@ export default function ListeningStations({ onAwardTeamScore, genAlphaMode, acti
 
   const currentAudioWordString = audioWordList[dictationIndex % audioWordList.length];
   const audioDetail = ALL_WORDS_MAP[currentAudioWordString.toLowerCase()] || {
-    def: 'Official Scripps Words of the Champions audio study word',
+    def: 'Official English 1 National Spelling Bee audio study word',
     ex: `Listen to the enunciation of '${currentAudioWordString}'.`,
     pattern: 'Audio dictation word'
   };
@@ -214,7 +214,7 @@ export default function ListeningStations({ onAwardTeamScore, genAlphaMode, acti
 
   const currentQuizTarget = quizWordList[quizIndex % quizWordList.length];
   const currentQuizDetail = ALL_WORDS_MAP[currentQuizTarget.toLowerCase()] || {
-    def: 'Scripps Words of the Champions test word',
+    def: 'English 1 National Spelling Bee test word',
     ex: `Listen and choose the correct orthographic form for '${currentQuizTarget}'.`
   };
 

@@ -52,7 +52,7 @@ export const SCRIPPS_HOMOPHONE_PAIRS: HomophonePair[] = [
     soundIpa: '/ˈsteɪ.ʃən.er.i/',
     category: 'Scripps Two-Bee Traps',
     targetWord: 'stationery',
-    ruleTip: 'Scripps Rule 4: When words sound identical, spellers must confirm whether writing supplies or motionlessness is meant!',
+    ruleTip: 'English 1 Competition Standard: When words sound identical, spellers must confirm whether writing supplies or motionlessness is meant!',
     words: [
       {
         word: 'stationary',
@@ -207,7 +207,7 @@ export const SCRIPPS_HOMOPHONE_PAIRS: HomophonePair[] = [
     soundIpa: '/bəˈzɑːr/',
     category: 'Championship Finalists',
     targetWord: 'bazaar',
-    ruleTip: 'Frequent Scripps onstage tiebreaker! Persian marketplace vs French/Basque oddity.',
+    ruleTip: 'Frequent English 1 onstage tiebreaker! Persian marketplace vs French/Basque oddity.',
     words: [
       {
         word: 'bazaar',

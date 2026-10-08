@@ -209,7 +209,7 @@ export default function HomophoneStageShowdown({
               <Scale className="w-4 h-4" /> Championship Stage Homophone Arena
             </span>
             <span className="text-xs font-black uppercase tracking-widest font-mono bg-white/20 text-white px-3 py-1 rounded-full border border-white/30 backdrop-blur-sm">
-              Scripps Rule 4 Protocol 🎙️
+              English 1 Homophone Protocol 🎙️
             </span>
             <span className="text-xs font-black uppercase tracking-widest font-mono bg-amber-400 text-slate-950 px-3 py-1 rounded-full border-2 border-slate-950">
               {filteredPairs.length} Competition Pairs Available
@@ -222,7 +222,7 @@ export default function HomophoneStageShowdown({
           </h2>
 
           <p className="text-sm sm:text-base font-bold text-fuchsia-100 leading-relaxed max-w-3xl">
-            At the <strong>Scripps National Spelling Bee</strong>, homophones are the deadliest traps on stage! Two words sound exactly the same, but have completely different spellings and meanings. Practice stepping up to the microphone, asking Dr. Jacques Bailly for definitions, and mastering stage etiquette!
+            In the <strong>English 1 National Spelling Bee Competition</strong> (licensed by Puspresnas), homophones are the deadliest traps on stage! Two words sound identical, but differ in spelling, origin, and definition. Master stepping to the stage mic, asking clarifying questions, and executing the mandatory "Say – Spell – Say" routine!
           </p>
 
           {/* Quick Sub-Navigation for the 3 Homophone Modes */}
@@ -259,7 +259,7 @@ export default function HomophoneStageShowdown({
                   : 'bg-white/15 hover:bg-white/25 text-white border-2 border-white/30'
               }`}
             >
-              <span>📜 Scripps Stage Protocol & Rules</span>
+              <span>📜 English 1 Stage Protocol & Rules</span>
               <span className="text-[10px] bg-black/20 px-1.5 py-0.5 rounded font-mono">Guide</span>
             </button>
           </div>
@@ -293,7 +293,7 @@ export default function HomophoneStageShowdown({
                       : 'bg-fuchsia-50 text-slate-700 hover:bg-fuchsia-100 border border-fuchsia-200'
                   }`}
                 >
-                  {cat === 'all' ? 'All (22)' : cat}
+                  {cat === 'all' ? 'All (22)' : cat === 'Scripps Two-Bee Traps' ? 'English 1 Stage Traps' : cat}
                 </button>
               ))}
             </div>
@@ -797,7 +797,7 @@ export default function HomophoneStageShowdown({
                       : 'bg-fuchsia-50 text-slate-700 hover:bg-fuchsia-100 border border-fuchsia-200'
                   }`}
                 >
-                  {cat === 'all' ? `All Pairs (${SCRIPPS_HOMOPHONE_PAIRS.length})` : cat}
+                  {cat === 'all' ? `All Pairs (${SCRIPPS_HOMOPHONE_PAIRS.length})` : cat === 'Scripps Two-Bee Traps' ? 'English 1 Stage Traps' : cat}
                 </button>
               ))}
             </div>
@@ -924,38 +924,38 @@ export default function HomophoneStageShowdown({
           {/* Official Rule 4 Explanation */}
           <div className="bg-white rounded-[32px] p-6 sm:p-8 border-4 border-[#560e51] shadow-[8px_8px_0px_0px_#560e51] space-y-6">
             <div className="border-b-2 border-fuchsia-100 pb-4">
-              <span className="text-xs font-mono font-black uppercase text-[#9b2c98]">Scripps National Spelling Bee Rulebook</span>
+              <span className="text-xs font-mono font-black uppercase text-[#9b2c98]">English 1 National Spelling Bee Competition Guidelines</span>
               <h3 className="text-2xl sm:text-3xl font-black text-slate-900 uppercase tracking-tight mt-1">
-                Official Rule 4: Homophone & Speller Inquiries 🏛️
+                English 1 Competition Protocol: Homophone Disarming & Inquiries 🏛️
               </h3>
               <p className="text-sm font-bold text-slate-600 mt-1 leading-relaxed">
-                How championship spellers handle homophones under the bright stage lights without getting eliminated!
+                How Group B (Grades 3–4) and Group C spellers successfully navigate homophones on the national stage in Jakarta!
               </p>
             </div>
 
-            {/* Rule 4 Highlights */}
+            {/* Rule Highlights */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-5 rounded-2xl bg-amber-50 border-2 border-amber-400 space-y-2">
-                <span className="text-xs font-mono font-black uppercase text-amber-900">Official Scripps Rule 4.1</span>
-                <h4 className="text-base font-black text-amber-950 uppercase">Pronouncer Obligation</h4>
+                <span className="text-xs font-mono font-black uppercase text-amber-900">English 1 Pronouncer Protocol</span>
+                <h4 className="text-base font-black text-amber-950 uppercase">Word ➔ Sentence ➔ Word Delivery</h4>
                 <p className="text-xs font-bold text-amber-900 leading-relaxed">
-                  "If a word has one or more homophones or near-homophones, the pronouncer must indicate the definition or use the word in a sentence without being asked."
+                  "The pronouncer states the word, reads the sentence, and repeats the word. If the word has homophones, the sentence provides vital context to distinguish the intended meaning."
                 </p>
                 <p className="text-[11px] text-amber-800 font-medium pt-1">
-                  <em>However: In school and regional bees, pronouncers can sometimes forget! Spellers must ALWAYS be vigilant and ask!</em>
+                  <em>Tip for Spellers: Always confirm the definition or ask for the sentence again to make 100% sure you are spelling the intended word!</em>
                 </p>
               </div>
 
               <div className="p-5 rounded-2xl bg-emerald-50 border-2 border-emerald-500 space-y-2">
-                <span className="text-xs font-mono font-black uppercase text-emerald-900">Official Scripps Rule 4.2</span>
-                <h4 className="text-base font-black text-emerald-950 uppercase">Speller’s Legal Questions</h4>
+                <span className="text-xs font-mono font-black uppercase text-emerald-900">English 1 Permitted Questions</span>
+                <h4 className="text-base font-black text-emerald-950 uppercase">Speller's Inquiries Before Spelling</h4>
                 <p className="text-xs font-bold text-emerald-900 leading-relaxed">
-                  The speller is legally entitled to ask for:
-                  <br />• Definition
-                  <br />• Part of speech
-                  <br />• Language of origin
-                  <br />• Use in a sentence
-                  <br />• Alternate pronunciations
+                  Contestants are permitted to politely ask:
+                  <br />• <em>"Can you repeat the word, please?"</em>
+                  <br />• <em>"May I have the definition?"</em>
+                  <br />• <em>"Could you repeat the sentence?"</em>
+                  <br />• <em>"What is the part of speech?"</em>
+                  <br />• <em>"What is the language of origin?"</em>
                 </p>
               </div>
             </div>

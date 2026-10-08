@@ -44,7 +44,7 @@ export default function AnimatedMasteryBar({
               </span>
             </div>
             <p className="text-xs text-purple-200/90 font-medium">
-              Tree of Knowledge • 90-Minute Scripps National Spelling Bee Journey
+              Tree of Knowledge • 90-Minute English 1 National Spelling Bee Journey
             </p>
           </div>
         </div>
